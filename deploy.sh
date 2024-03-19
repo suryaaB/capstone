@@ -14,9 +14,9 @@ build_and_push_image_dev() {
 }
 
 
-if [ "$GIT_BRANCH" = "dev" ]; then
+if [ $GIT_BRANCH = "origin/dev" ]; then
     build_and_push_image_dev
-elif [ "$GIT_BRANCH" = "master" ]; then
+elif [ $GIT_BRANCH = "origin/master" ]; then
     build_and_push_image 
 else
     echo "Error: Invalid branch. The supported branches are 'dev' and 'master'."
