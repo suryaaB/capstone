@@ -23,9 +23,9 @@ fi
 
 BRANCH=$1
 
-if [ "$BRANCH" = "dev" ]; then
+if [ "$GIT_BRANCH" = "dev" ]; then
     build_and_push_image "dev"
-elif [ "$BRANCH" = "master" ]; then
+elif [ "$GIT_BRANCH" = "master" ]; then
     build_and_push_image "prod"
 else
     echo "Error: Invalid branch. The supported branches are 'dev' and 'master'."
