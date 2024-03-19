@@ -5,11 +5,11 @@ DOCKER_USERNAME="suryaa05"
 docker login -u $DOCKER_USERNAME -p dckr_pat_NZiazd1UpDiiMVDwt0dExnj8TcA
 
 build_and_push_image() {
-    docker build -t $DOCKER_USERNAME/prod
+    docker build -t $DOCKER_USERNAME/prod .
     docker push $DOCKER_USERNAME/prod
 }
 build_and_push_image_dev() {
-    docker build -t $DOCKER_USERNAME/dev
+    docker build -t $DOCKER_USERNAME/dev .
     docker push $DOCKER_USERNAME/dev
 }
 
